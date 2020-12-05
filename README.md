@@ -5,9 +5,13 @@ Home: http://geuz.org/gl2ps
 
 Package license: LGPL-2.0-or-later
 
-Feedstock license: BSD-3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/gl2ps-feedstock/blob/master/LICENSE.txt)
 
 Summary: OpenGL to PostScript Printing Library
+
+Development: http://gitlab.onelab.info/gl2ps/gl2ps
+
+Documentation: http://geuz.org/gl2ps/#tth_sEc1
 
 This is GL2PS, an OpenGL to PostScript (and PDF, and SVG...) printing library.
 
@@ -69,6 +73,13 @@ Current build status
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=8632&branchName=master">
                   <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/gl2ps-feedstock?branchName=master&jobName=osx&configuration=osx_64_" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_arm64</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=8632&branchName=master">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/gl2ps-feedstock?branchName=master&jobName=osx&configuration=osx_arm64_" alt="variant">
                 </a>
               </td>
             </tr><tr>

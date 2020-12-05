@@ -2,7 +2,7 @@
 
 mkdir build && cd build
 
-cmake -LAH \
+cmake ${CMAKE_ARGS} -LAH \
     -DCMAKE_INSTALL_LIBDIR=lib \
     -DCMAKE_INSTALL_PREFIX=${PREFIX} \
     ../source
