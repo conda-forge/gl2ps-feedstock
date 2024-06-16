@@ -14,7 +14,7 @@ source:
     - 0001-Disable-static-library-on-Windows.patch
 
 build:
-  number: 0
+  number: 1
   skip: true  # [win and vc<14]
   run_exports:
     # Hasn't been updated in years so pin tightly
@@ -23,6 +23,7 @@ build:
 requirements:
   build:
     - {{ compiler('c') }}
+    - {{ stdlib("c") }}
     - cmake
     - make  # [unix]
     - ninja  # [win]
