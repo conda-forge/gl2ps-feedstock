@@ -1,12 +1,11 @@
-{% set name = "gl2ps" %}
 {% set version = "1.4.2" %}
 
 package:
-  name: {{ name|lower }}
+  name: gl2ps
   version: {{ version }}
 
 source:
-  url: http://geuz.org/{{ name }}/src/{{ name }}-{{ version }}.tgz
+  url: http://geuz.org/gl2ps/src/gl2ps-{{ version }}.tgz
   sha256: 8d1c00c1018f96b4b97655482e57dcb0ce42ae2f1d349cd6d4191e7848d9ffe9
   folder: source
   patches:
@@ -15,7 +14,6 @@ source:
 
 build:
   number: 2
-  skip: true  # [win and vc<14]
   run_exports:
     # Hasn't been updated in years so pin tightly
     - {{ pin_subpackage('gl2ps', max_pin='x.x.x') }}
@@ -25,8 +23,7 @@ requirements:
     - {{ compiler('c') }}
     - {{ stdlib("c") }}
     - cmake
-    - make  # [unix]
-    - ninja  # [win]
+    - ninja
     # Required for OpenGL support
     # See https://conda-forge.org/docs/maintainer/knowledge_base.html?highlight=cdt#libgl
   host:
