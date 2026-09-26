@@ -1,4 +1,4 @@
-{% set version = "1.4.2" %}
+{% set version = "1.4.3" %}
 
 package:
   name: gl2ps
@@ -6,14 +6,14 @@ package:
 
 source:
   url: http://geuz.org/gl2ps/src/gl2ps-{{ version }}.tgz
-  sha256: 8d1c00c1018f96b4b97655482e57dcb0ce42ae2f1d349cd6d4191e7848d9ffe9
+  sha256: 2e0a5368917cf0e5467ba8618bc576f50ae9f316c61201635b09711c7908efcc
   folder: source
   patches:
     # https://gitlab.onelab.info/gl2ps/gl2ps/-/issues/30
     - 0001-Disable-static-library-on-Windows.patch
 
 build:
-  number: 2
+  number: 0
   run_exports:
     # Hasn't been updated in years so pin tightly
     - {{ pin_subpackage('gl2ps', max_pin='x.x.x') }}
